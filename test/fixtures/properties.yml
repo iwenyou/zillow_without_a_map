@@ -1,0 +1,55 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sale_type: MyString
+  sold_date: 2021-09-02
+  property_type: MyString
+  address: MyString
+  city: MyString
+  address: MyString
+  state: MyString
+  zip: 1
+  price: 
+  beds: 1
+  location: MyString
+  sqft: 1
+  lot_size: 1
+  year_built: 1
+  days_on_market: 1
+  price_per_sqft: 1
+  hoa: 1
+  source: MyString
+  mls: 1
+  favorite: false
+  interested: false
+  latitude: 1.5
+  longitude: 1.5
+  open_house_start_time: MyString
+  open_house_end_time: MyString
+
+two:
+  sale_type: MyString
+  sold_date: 2021-09-02
+  property_type: MyString
+  address: MyString
+  city: MyString
+  address: MyString
+  state: MyString
+  zip: 1
+  price: 
+  beds: 1
+  location: MyString
+  sqft: 1
+  lot_size: 1
+  year_built: 1
+  days_on_market: 1
+  price_per_sqft: 1
+  hoa: 1
+  source: MyString
+  mls: 1
+  favorite: false
+  interested: false
+  latitude: 1.5
+  longitude: 1.5
+  open_house_start_time: MyString
+  open_house_end_time: MyString
