@@ -10,17 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_02_203218) do
+ActiveRecord::Schema.define(version: 2021_09_07_041205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "pg_search_documents", force: :cascade do |t|
+    t.text "content"
+    t.string "searchable_type"
+    t.bigint "searchable_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable"
+  end
+
   create_table "properties", force: :cascade do |t|
     t.string "sale_type"
-    t.date "sold_date"
+    t.string "sold_date"
     t.string "property_type"
-    t.string "city"
     t.string "address"
+    t.string "city"
     t.string "state"
     t.integer "zip"
     t.integer "price"

@@ -2,14 +2,13 @@
 
 one:
   sale_type: MyString
-  sold_date: 2021-09-02
+  sold_date: MyString
   property_type: MyString
   address: MyString
   city: MyString
-  address: MyString
   state: MyString
   zip: 1
-  price: 
+  price: 1
   beds: 1
   location: MyString
   sqft: 1
@@ -29,14 +28,13 @@ one:
 
 two:
   sale_type: MyString
-  sold_date: 2021-09-02
+  sold_date: MyString
   property_type: MyString
   address: MyString
   city: MyString
-  address: MyString
   state: MyString
   zip: 1
-  price: 
+  price: 1
   beds: 1
   location: MyString
   sqft: 1
