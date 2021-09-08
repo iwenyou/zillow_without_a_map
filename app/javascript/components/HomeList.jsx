@@ -1,15 +1,13 @@
 import React from 'react';
 
-const HomeList = ({houses = []}) => {
+const HomeList = ({matchingHouses: matchingHouses}) => {
   return (
     <>
     {
-      houses.map((house) => {
+      matchingHouses.map((house, index) => {
         if(house){
           return (
-            <div key = "{house.id}">
-              <p>{house.address}</p>
-            </div>
+              <p key={index}>{house.address}</p>
           )
         }
           return null;      }

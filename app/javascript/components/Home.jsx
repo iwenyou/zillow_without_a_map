@@ -6,28 +6,28 @@ import Header from './Header';
 import Search from './Search';
 
 const Home = () => {
-  const [houses, setHouses] = useState([]);
+  const [matchingHouses, setMatchingHouses] = useState([]);
+  const [address, setAddress]  = useState('');
 
-  const search_api = async () => {
-    return await axios.get(`api/v1/search`,{ params: {address: "st"} })
-        .then(res => {
-          console.log(res);
-          setHouses(res.data);
-        });
+
+  //making api call with axios to fetch houses with matching address and assign them to matchingHouses
+  const get_houses = async () => {
+    console.log(`started searching with "${address}"`);
+      return await axios.get(`api/v1/search`,{ params: {address: address} })
+          .then(res => {
+            // console.log(res);
+            setMatchingHouses(res.data);
+          });
   }
 
-
-useEffect( () => {search_api()},[]);
 
   return (
     <div>
       <Header />
-      <Search />
-      <HomeList houses = {houses}/>
+      <Search address = {address} setAddress = {setAddress} get_houses = {get_houses}/>
+      <HomeList matchingHouses = {matchingHouses}/>
     </div>
   );
-
-
 }
 
 export default Home;

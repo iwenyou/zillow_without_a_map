@@ -1,14 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 
-const search_bar = ({keyword,setKeyword}) => {
+const SearchBar = ({address: address, setAddress: setAddress, get_houses: get_houses}) => {
+
+  //call the get_house function with current Address
+  const start_search = (e) => {
+    e.preventDefault();
+    console.log(`house search triggered`);
+    get_houses();
+  }
+
+  //changing the Address everytime when there are changes in input box
+  const inputOnChange = (e) => {
+    setAddress(e.target.value);
+    console.log(address);
+  }
 
   return (
+    <form action="/" method="get">
     <input
-    key = "address"
-    value = {keyword}
+    value = {address}
+    onChange = {inputOnChange}
     placeholder = "Enter address"
     />
+    <button onClick={start_search} type="submit" >search</button>
+    </form>
   );
 }
 
-export default search_bar;
+export default SearchBar;
